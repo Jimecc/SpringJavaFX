@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="window_demo" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jim.sprjfx.controller.DemoController">
+   <children>
+      <!-- 要发送的信息 -->
+      <TextField fx:id="TextField_SendData" layoutX="35.0" layoutY="52.0" onAction="#onEnter_send_data" onMouseClicked="#onMouseClicked_sendWebsocketMessage" prefHeight="32.0" prefWidth="515.0" promptText="WebSocket Send Message" />
+      <!-- websocket提交按钮 -->
+      <Button fx:id="button_submit" layoutX="425.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_submit" onMouseMoved="#onMouseMoved_button_submit" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #33CCFF;" text="发      送" textFill="WHITE" />
+      <Pane layoutX="32.0" layoutY="129.0" prefHeight="109.0" prefWidth="235.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 10;">
+         <children>
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="30.0" layoutY="49.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+         </children></Pane>
+      <Pane layoutX="20.0" layoutY="418.0" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10;">
+         <children>
+            <Button fx:id="button_newnumber" layoutX="78.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_button_newnumber" onMouseMoved="#onMouseMoved_button_newnumber" style="-fx-background-color: #FFFFFF;" text="添加用户" textFill="GREY" />
+            <Button fx:id="button_logout" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_layout" onMouseMoved="#onMouseMoved_button_logout" style="-fx-background-color: #ffffff;" text="退出登录" textFill="GREY" />
+         </children>
+      </Pane>
+
+      <TextField fx:id="textField_JsonAddress" layoutX="35.0" layoutY="267.0" onAction="#onAction_JsonAddress" onMouseClicked="#onMouseClicked_JsonAddress" prefHeight="32.0" prefWidth="515.0" promptText="Json Address" />
+      <Button fx:id="button_submit_jsonAddress" layoutX="428.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_button_submit_jsonAddress" onMouseMoved="#onMouseMoved_button_submit_jsonAddress" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #33CCFF;" text="确      定" textFill="WHITE" />
+
+      <Label fx:id="label_nums" layoutX="36.0" layoutY="90.0" prefHeight="15.0" prefWidth="334.0" style="-fx-background-color: #FFFFFF;" textFill="#15c930" />
+      <Label layoutX="23.0" layoutY="26.0" text="WebSocket Data">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="235.0" text="JSON Address">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_address_update_success" layoutX="36.0" layoutY="306.0" prefHeight="17.0" prefWidth="179.0" style="-fx-background-color: #FFFFFF;" textFill="#15c930" />
+      <Label fx:id="label_address_update_fail" layoutX="35.0" layoutY="324.0" prefHeight="15.0" prefWidth="500.0" textFill="#b2b2b2" />
+      <Label layoutX="36.0" layoutY="339.0" prefHeight="15.0" prefWidth="500.0" textFill="#15c930" />
+
+      <!-- Lines -->
+      <Line endX="306.0" layoutX="240.0" layoutY="35.0" startX="-100.0" stroke="#868686" strokeWidth="0.3" />
+      <Line endX="330.0" layoutX="218.0" layoutY="245.0" startX="-94.0" stroke="#868686" strokeWidth="0.3" />
+      <Line endX="420.0" layoutX="135.0" layoutY="407.0" startX="-100.0" stroke="#868686" strokeWidth="0.3" />
+      <Label fx:id="label_WebSocketType" layoutX="36.0" layoutY="108.0" prefHeight="15.0" prefWidth="334.0" style="-fx-background-color: #FFFFFF;" textFill="#ffa54d" />
+      <Button fx:id="button_startRedis" layoutX="35.0" layoutY="378.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_startRedis" onMouseMoved="#onMouseMoved_startRedis" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #ABDC65;" text="Start Redis" textFill="WHITE" />
+      <Button fx:id="button_startSocket" layoutX="329.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_startSocket" onMouseMoved="#onMouseMoved_startSocket" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #A0EEE1; -fx-background-radius: 7;" text="开   /   关" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font></Button>
+      <Button fx:id="buttonClearWebsocket" layoutX="242.0" layoutY="93.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_turnOff" onMouseMoved="#onMouseMoved_buttonClearWebsocket" style="-fx-background-color: #A0EEE1; -fx-background-radius: 7;" text="清空已连接" textFill="WHITE" />
+      <Button layoutX="291.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_openWebsocketWeb" text="打开Websocket测试网页" />
+      <Button fx:id="buttonTurnUpload" layoutX="140.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedTurnUpload" onMouseMoved="#onMouseMoved_turnUpload" style="-fx-background-color: #A0EEE1; -fx-background-radius: 7;" text="开/关上传功能" textFill="WHITE" />
+      <Button fx:id="buttonTurnDownload" layoutX="34.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#onMouseClickedTurnDownload" onMouseMoved="#onMouseMoved_turnDownload" style="-fx-background-color: #A0EEE1; -fx-background-radius: 7;" text="开/关下载功能" textFill="WHITE" />
+      <Button fx:id="button_switchGetPost" layoutX="343.0" layoutY="301.0" mnemonicParsing="false" onMouseMoved="#onMouseMoved_button_switchGetPost" style="-fx-background-color: #A0EEE1; -fx-background-radius: 7;" text="接收Get / Post请求" textFill="WHITE" />
+      <Button layoutX="480.0" layoutY="301.0" mnemonicParsing="false" style="-fx-background-color: #A0EEE1; -fx-background-radius: 7;" text="开关转发" textFill="WHITE" />
+
+   </children>
+</AnchorPane>

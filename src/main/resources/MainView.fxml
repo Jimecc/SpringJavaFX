@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="window_login" prefHeight="320.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;" styleClass="black" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jim.sprjfx.controller.MainController">
+   <children>
+      <Label layoutX="243.0" layoutY="53.0" text="登录" textFill="#5ccc67">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textField_username" layoutX="198.0" layoutY="118.0" onAction="#onEnter_username" onMouseClicked="#onMouseClicked_username" promptText="用户名" />
+      <TextField fx:id="textField_password" layoutX="198.0" layoutY="151.0" onAction="#onEnter_password" onMouseClicked="#onMouseClicked_password" promptText="密码" />
+      <Label layoutX="142.0" layoutY="120.0" text="用户名：" textFill="#5e5e5e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="153.0" text="密   码：" textFill="#5e5e5e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonLogin" layoutX="160.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#tryLogin" onMouseMoved="#onMouseMoved_Login" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: #33CCFF;" text="登    录" textFill="WHITE">
+         <font>
+            <Font name="Microsoft JhengHei Light" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonRegister" layoutX="170.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_buttonRegister" onMouseMoved="#onMouseMoved_buttonRegister" style="-fx-background-color: #FFFFFF;" text="注册" textFill="#808080" />
+      <Button fx:id="buttonForget" layoutX="297.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_buttonForget" onMouseMoved="#onMouseMoved_buttonForget" style="-fx-background-color: #FFFFFF;" text="忘记密码" textFill="#808080" />
+<!--      <CheckBox fx:id="chexkBox_showPossword" layoutX="369.0" layoutY="155.0" mnemonicParsing="false" onMouseEntered="#onMouseMoved_chexkBox_showPossword" onMouseExited="#onMouseExited_chexkBox_showPossword" text="显示密码（待调整）" textFill="#808080" />-->
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="labelLogin" layoutX="198.0" layoutY="100.0" textFill="#ff3333">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+
+      <Button fx:id="button_clear1" onMouseClicked="#onMouseClicked_button1" layoutX="369.0" layoutY="121.0" mnemonicParsing="false" onMouseMoved="#onMouseMoved_button1" style="-fx-background-color: white;" text="×" textFill="#909090">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_clear2" onMouseClicked="#onMouseClicked_button2" layoutX="369.0" layoutY="154.0" mnemonicParsing="false" onMouseMoved="#onMouseMoved_button2" style="-fx-background-color: white;" text="×" textFill="#909090">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

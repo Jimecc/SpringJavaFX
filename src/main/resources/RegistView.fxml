@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jim.sprjfx.controller.RegistController">
+   <children>
+      <TextField fx:id="TextFiled_nickname" layoutX="88.0" layoutY="50.0" onAction="#onMouseEntered1" onMouseClicked="#onMouseClicked1" promptText="昵称" />
+      <TextField fx:id="TextFiled_username" layoutX="88.0" layoutY="90.0" onAction="#onMouseEntered2" onMouseClicked="#onMouseClicked2" promptText="用户名" />
+      <TextField fx:id="TextFiled_password" layoutX="88.0" layoutY="130.0" onAction="#onMouseEntered3" onMouseClicked="#onMouseClicked3" promptText="密码" />
+      <TextField fx:id="TextFiled_repassword" layoutX="88.0" layoutY="170.0" onAction="#onMouseEntered4" onMouseClicked="#onMouseClicked4" promptText="确认密码" />
+      <Button fx:id="button_loginNow" layoutX="54.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_button_LoginNow" onMouseMoved="#onMouseMo_button_loginNow" style="-fx-background-color: #ffffff;" text="已有账户 立即登录" textFill="#9a9a9a" underline="true" />
+      <Button fx:id="button_submit" defaultButton="true" layoutX="467.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#onMouseClicked_button_submir" onMouseMoved="#onMouseMo_button_submit" style="-fx-background-color: #6495ED;" text="提  交" textFill="WHITE">
+         <font>
+            <Font name="Brush Script MT Italic" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="32.0" layoutY="52.0" text="昵   称" textFill="#6b6b6b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="93.0" text="用户名" textFill="#6b6b6b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="133.0" text="密   码" textFill="#6b6b6b">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="173.0" text="确认密码" textFill="#6b6b6b">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1" layoutX="260.0" layoutY="54.0" text="" textFill="#ff3535" />
+      <Label fx:id="label2" layoutX="260.0" layoutY="94.0" text="" textFill="#ff3535" />
+      <Label fx:id="label3" layoutX="260.0" layoutY="134.0" text="" textFill="#ff3535" />
+      <Label fx:id="label4" layoutX="260.0" layoutY="173.0" text="" textFill="#ff3535" />
+      <Button layoutX="256.0" onMouseClicked="#onMouseClicked_clear" layoutY="90.4" mnemonicParsing="false" text="清空" textFill="#7c7c7c">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Label fx:id="label5" layoutX="298.0" layoutY="95.0" textFill="#ff4040" />
+   </children>
+</AnchorPane>

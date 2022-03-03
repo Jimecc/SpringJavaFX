@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="159.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jim.sprjfx.controller.MiniView_cantRegist_Controller">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="92.0" prefWidth="273.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+         <children>
+            <Label fx:id="label1" layoutX="15.0" layoutY="9.0" text="抱歉，管理员禁止自行注册。" />
+            <Label fx:id="label2" layoutX="15.0" layoutY="30.0" text="请联系管理员添加账户。" />
+         </children>
+      </Pane>
+      <Button onMouseClicked="#onMouseClicked_ok" layoutX="230.0" layoutY="122.0" mnemonicParsing="false" text="确 定" />
+   </children>
+</AnchorPane>

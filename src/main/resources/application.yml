@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 12345ioS
+    url: jdbc:mysql://localhost:3306/shsw?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    redis:
+      host: localhost
+      port: 6379
+      # 超时时间
+      timeout: 1000
+
+    servlet:
+      multipart: true
+
+
+
+
+ws:
+  port: 8889
+  title: ws服务器
+  boss-count: 1
+  work-count: 100
+  allow-custom-requests: true
+  upgrade-timeout: 10000
+  ping-timeout: 60000
+  ping-interval: 25000
+
+
+
+
+mybatis:
+#  type-aliases-packages: com.jim.sprjfx.entity  # 别名
+  mapper-locations: classpath:/mybatis/*.xml   # xml文件
+
+logging:
+  file:
+    name: log/log.log
+  level:
+    root: info
+    jim: debug

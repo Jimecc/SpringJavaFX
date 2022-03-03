@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jim.sprjfx.mapper.UserMapper">
+    <select id="listUsers" resultType="com.jim.sprjfx.entity.User">
+        select * from shsw.users;
+    </select>
+
+    <select id="getUserByUserName" parameterType="string" resultType="com.jim.sprjfx.entity.User">
+        select * from shsw.users where username=#{username}
+    </select>
+    <insert id="newUser" parameterType="com.jim.sprjfx.entity.User" >
+        insert into shsw.users(nickname, username, password,salt) values (#{nickname},#{username},#{password},#{salt})
+    </insert>
+
+</mapper>
